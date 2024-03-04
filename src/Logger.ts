@@ -14,7 +14,7 @@ export class Logger implements Iterable<loginInfo> {
    * Método para devolver la única instacia de la clase, si no existe la crea
    * @returns La instancia sinleton
    */
-  static getInstance(): Logger {
+  public static getInstance(): Logger {
     if (!Logger.instanceLogger) {
       Logger.instanceLogger = new Logger();
     }

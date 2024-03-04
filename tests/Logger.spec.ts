@@ -6,8 +6,6 @@ const logger = Logger.getInstance();
 const date = new Date();
 
 describe("Logger", () => {
-  before(function () {});
-
   it("should add log entry correctly", () => {
     logger.addLog("user1", "login", date);
 
