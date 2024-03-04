@@ -52,8 +52,8 @@ export class Logger implements Iterable<loginInfo> {
    * Obtener logs cuya acción sea login
    * @returns Los logs correspondientes a la acción
    */
-  getLoginLogs(): Array<loginInfo> {
-    return this.log.filter((entry) => entry[1] === "login");
+  getLogsByAction(action: string): Array<loginInfo> {
+    return this.log.filter((entry) => entry[1] === action);
   }
 
   /**

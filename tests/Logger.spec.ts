@@ -28,11 +28,15 @@ describe("Logger", () => {
   it("should get login actions correctly", () => {
     logger.addLog("user3", "login", date);
 
-    expect(logger.getLoginLogs()).to.deep.equal([
+    expect(logger.getLogsByAction("login")).to.deep.equal([
       ["user1", "login", date],
       ["user2", "login", date],
       ["user3", "login", date],
     ]);
+  });
+
+  it("should get logout actions correctly", () => {
+    expect(logger.getLogsByAction("logout")).to.deep.equal([["user2", "logout", date]]);
   });
 
   it("should get actions between dates correctly", () => {
