@@ -23,17 +23,17 @@ export class Logger implements Iterable<loginInfo> {
 
   /**
    * Método para añadir un log
-   * @param user Usuario por el que se filtrará
-   * @param action
+   * @param user Usuario
+   * @param action Acción
+   * @param date Fecha
    */
   addLog(user: string, action: string, date: Date): void {
     this.log.push([user, action, date]);
   }
 
   /**
-   * Obtener logs de un usuario en concreto
-   * @param user
-   * @returns
+   * Obtener logs
+   * @returns Los logs
    */
   getLogs(): Array<loginInfo> {
     return this.log;
@@ -41,8 +41,8 @@ export class Logger implements Iterable<loginInfo> {
 
   /**
    * Obtener logs de un usuario en concreto
-   * @param user
-   * @returns
+   * @param user El usuario
+   * @returns Los logs de ese usuario
    */
   getLogByUser(user: string): Array<loginInfo> {
     return this.log.filter((entry) => entry[0] === user);
@@ -50,9 +50,9 @@ export class Logger implements Iterable<loginInfo> {
 
   /**
    * Obtener logs cuya acción sea login
-   * @returns
+   * @returns Los logs correspondientes a la acción
    */
-  getLoginActions(): Array<loginInfo> {
+  getLoginLogs(): Array<loginInfo> {
     return this.log.filter((entry) => entry[1] === "login");
   }
 
@@ -60,9 +60,9 @@ export class Logger implements Iterable<loginInfo> {
    * Obtener logs dentro de una fecha
    * @param startDate
    * @param endDate
-   * @returns
+   * @returns Los logs entre las dos fechas
    */
-  getActionsBetweenDates(startDate: Date, endDate: Date): Array<loginInfo> {
+  getLogsBetweenDates(startDate: Date, endDate: Date): Array<loginInfo> {
     return this.log.filter((entry) => entry[2] >= startDate && entry[2] <= endDate);
   }
 
