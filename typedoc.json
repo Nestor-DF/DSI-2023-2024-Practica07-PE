@@ -1,0 +1,9 @@
+{
+  "entryPoints": ["./src/**/*.ts"],
+  "out": "./docs",
+  "$schema": "https://typedoc.org/schema.json",
+  "plugin": ["@mxssfd/typedoc-theme"],
+  "theme": "my-theme",
+  "tsconfig": "./tsconfig.json",
+  "name": "Desarrollo de Sistemas Informáticos - DSI"
+}

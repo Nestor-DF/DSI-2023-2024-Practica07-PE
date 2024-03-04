@@ -1,0 +1,35 @@
+{
+  "name": "ull-esit-inf-dsi-23-24-prct05-vscode-nestor-df",
+  "version": "1.0.0",
+  "description": "Práctica DSI",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc npm test && nyc report --reporter=lcov",
+    "start": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "doc": "typedoc"
+  },
+  "keywords": [],
+  "author": "Néstor Delgado Feliciano",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.19",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "chai": "^4.4.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.9.2",
+    "tsc-watch": "^6.0.4",
+    "typedoc": "^0.25.7",
+    "typedoc-theme-hierarchy": "^4.1.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@mxssfd/typedoc-theme": "^1.1.3"
+  }
+}
